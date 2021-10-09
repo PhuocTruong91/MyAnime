@@ -54,9 +54,6 @@ const InfoVideo = (props) => {
         setListEpisodeIndex(index)
     }
 
-    console.log(episodeList);
-
-
     return (
         isLoading ?
             (
@@ -91,10 +88,10 @@ const InfoVideo = (props) => {
                                 const firstEpisode = episodeList2[0].name;
                                 const lastEpisode = episodeList2[(episodeList2.length - 1)].name;
                                 return (
-                                    <>
-                                        <DisplayEpisode key={index1} onClick={() => handleDisplayEpisode(index1)}>Tập {firstEpisode} - Tập {lastEpisode}</DisplayEpisode>
+                                    <div style ={{width: '100%'}} key={index1}>
+                                        <DisplayEpisode  onClick={() => handleDisplayEpisode(index1)}>Tập {firstEpisode} - Tập {lastEpisode}</DisplayEpisode>
                                         {episodeList2.map((episode, index2) => (
-                                            <Link style={{ textDecoration: 'none', width: '100%'}} to={{
+                                            <Link  style={{ textDecoration: 'none', width: '100%'}} to={{
                                                 pathname: `/watch/${anime.slug}?episode_index=${episode.name}`,
                                                 data: {
                                                     id: anime.id,
@@ -112,7 +109,7 @@ const InfoVideo = (props) => {
 
                                         ))
                                         }
-                                    </>
+                                    </div>
                                 )
                             })
                         }
