@@ -1,23 +1,29 @@
-import logo from './logo.svg';
-import './App.css';
+import Navbar from './components/Navbar/Navbar'
+import Footer from './components/Footer/Footer'
+import Home from './pages/Home'
+import MovieDetail from './pages/MovieDetail'
+import WatchSreen from './pages/WatchSreen'
+import { BrowserRouter as Router, Route } from 'react-router-dom'
+import { QueryClient, QueryClientProvider } from 'react-query';
+
 
 function App() {
+
+  const queryClient = new QueryClient()
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <QueryClientProvider client={queryClient}>
+        <Router>
+          <Navbar></Navbar>
+          < >
+            <Route exact path='/' ><Home /></Route>
+            <Route exact path='/watch/:slug' ><WatchSreen /></Route>
+            <Route exact path='/info/:slug' ><MovieDetail /> </Route>
+          </ >
+          <Footer></Footer>
+        </Router>
+      </QueryClientProvider>
     </div>
   );
 }
