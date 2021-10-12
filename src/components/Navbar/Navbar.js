@@ -41,7 +41,7 @@ const Navbar = () => {
             <IconContext.Provider value={{ color: '#fff' }}>
                 <Nav click={click} show={show}>
                     <NavbarContainer>
-                        <NavLogo to='/'>
+                        <NavLogo to='/Anime'>
                             <p>ANIME</p>
                         </NavLogo>
                         <MobileIcon
@@ -51,7 +51,7 @@ const Navbar = () => {
                         </MobileIcon>
                         <NavMenu onClick={handleClick} click= {click}>
                             <NavItem>
-                                <NavLinks to='/'>Home</NavLinks>
+                                <NavLinks to='/Anime'>Home</NavLinks>
                             </NavItem>
                             <NavItem>
                                 <NavLinks to='/service'>Service</NavLinks>

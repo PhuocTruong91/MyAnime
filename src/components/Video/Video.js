@@ -1,18 +1,19 @@
 import React from 'react';
-// import Hls from 'hls.js'
-// import "plyr/dist/plyr.css";
-// import Plyr from 'plyr'
-// import "./plyr.css"
+import Hls from 'hls.js'
+import "plyr/dist/plyr.css";
+import Plyr from 'plyr'
+import "./plyr.css"
 import useQueryParams from '../../hooks/useQueryParams'
 import { getSource } from '../../service/Service'
 import { useLocation, useParams } from 'react-router-dom'
+import { LoadingOutlined } from '@ant-design/icons'
 // import { useFectchSource } from '../../hooks/useFectchSource';
 // import { useFectchInfo } from '../../hooks/useFectchInfo';
 
 const Video = () => {
     const { data } = useLocation();
     const query = useQueryParams();
-    const [videoSource, setVideoSource] = React.useState('');
+    const [videoSource, setVideoSource] = React.useState();
     const [episodeIndex, setEpisodeIndex] = React.useState(
         Number(query.get("episode_index")) || 0
     );
@@ -25,17 +26,17 @@ const Video = () => {
     // }
 
 
-    React.useEffect(() => {
+    React.useEffect(() =>  {
         const res = getSource(data.id, data.index)
         res
             .then((data) => {
+                console.log(data.data.videoSource);
                 setVideoSource(data.data.videoSource)
             })
             .catch((err) => { console.log(err) })
-
     }, [data])
 
-    console.log(videoSource);
+    
 
     // React.useEffect(() => {
     //     const controls = [
@@ -74,9 +75,13 @@ const Video = () => {
     // })
 
     return (
-            <video style={{ width: '100%', height: '40%' }} controls>
-                <source src={videoSource ? videoSource : 'https://netime.glitch.me/api/v1/cors/https://s100.imacdn.com/vg/2015/03/16/3678_99943.mp4?hash=e2cdebUvx2Rf6qgnQ_Kerg&expire=1633803548&title=Nobunaga the Fool Tập 6 - Sức mạnh (480p)'} type="video/mp4" />
-         </video>          
+        videoSource ?
+        <video style={{ width: '100%', height: '40%' }} controls>
+            <source src={videoSource} type="video/mp4" ></source>
+        </video>:
+        <div style={{ width: '97vw', height: '90vh',display:'flex',alignItems: 'center',justifyContent: 'center'}}>
+            <LoadingOutlined style={{color: 'gray', fontSize: '80px'}} ></LoadingOutlined>
+        </div>
     );
 };
 
