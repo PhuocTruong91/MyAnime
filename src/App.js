@@ -17,7 +17,7 @@ function App() {
         <Router>
           <Navbar></Navbar>
           < >
-            <Route exact path='/test3' ><Home /></Route>
+            <Route exact path='/Anime2' ><Home /></Route>
             <Route exact path='/watch/:slug' ><WatchSreen /></Route>
             <Route exact path='/info/:slug' ><MovieDetail /> </Route>
           </ >
