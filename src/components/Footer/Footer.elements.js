@@ -23,7 +23,7 @@ export const FooterContainer = styled.div`
 export const InfoContainer = styled.div`
     display: flex;
     justify-content: space-between;
-    align-items: center;
+    align-items: flex-start;
     width: 50%;
     margin-top: 15px;
 
@@ -38,6 +38,7 @@ export const InfoItem = styled.div`
     display: flex;
     flex-direction: column;
     justify-content: center;
+
     text-align: left;
     @media screen and (max-width: 600px){
         text-align: center;
@@ -48,11 +49,17 @@ export const InfoItem = styled.div`
 export const TitleInfoItem = styled.h1`
     font-size: 1.2rem;
     margin: 0;
+    color: rgba(255, 255, 255, 0.7)
 `
-export const ItemLink = styled(Link)`
+export const ItemLink = styled.div`
     color: gray;
     text-decoration: none;
     margin-top: 5px;
+   
+    a{
+        margin-right: 10px;
+        color: gray;
+    }
 `;
 
 export const Form = styled.form`
@@ -89,10 +96,11 @@ export const Button = styled.button`
     height: 40px;
     background-color: #991A27;
     color: white;
-    cursor: pointer;
+    cursor: context-menu;
     border: none;
     border-radius: 8px;
     margin-left: 15px;
+    
 
     :hover{
         background-color: #702F2C;

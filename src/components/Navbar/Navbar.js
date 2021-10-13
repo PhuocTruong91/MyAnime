@@ -54,10 +54,10 @@ const Navbar = () => {
                                 <NavLinks to='/Anime'>Home</NavLinks>
                             </NavItem>
                             <NavItem>
-                                <NavLinks to='/service'>Service</NavLinks>
+                                <NavLinks to='/Anime'>Service</NavLinks>
                             </NavItem>
                             <NavItem>
-                                <NavLinks to='/product'>Product</NavLinks>
+                                <NavLinks to='/Anime'>Product</NavLinks>
                             </NavItem>
                            
                         </NavMenu>

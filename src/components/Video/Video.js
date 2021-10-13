@@ -1,8 +1,8 @@
 import React from 'react';
-import Hls from 'hls.js'
-import "plyr/dist/plyr.css";
-import Plyr from 'plyr'
-import "./plyr.css"
+// import Hls from 'hls.js'
+// import "plyr/dist/plyr.css";
+// import Plyr from 'plyr'
+// import "./plyr.css"
 import useQueryParams from '../../hooks/useQueryParams'
 import { getSource } from '../../service/Service'
 import { useLocation, useParams } from 'react-router-dom'
