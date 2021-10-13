@@ -1,0 +1,24 @@
+{
+  "files": {
+    "main.css": "/MyAnime/static/css/main.e7fcfb21.chunk.css",
+    "main.js": "/MyAnime/static/js/main.ee987839.chunk.js",
+    "main.js.map": "/MyAnime/static/js/main.ee987839.chunk.js.map",
+    "runtime-main.js": "/MyAnime/static/js/runtime-main.ac681fef.js",
+    "runtime-main.js.map": "/MyAnime/static/js/runtime-main.ac681fef.js.map",
+    "static/css/2.5b915486.chunk.css": "/MyAnime/static/css/2.5b915486.chunk.css",
+    "static/js/2.ee53d3c2.chunk.js": "/MyAnime/static/js/2.ee53d3c2.chunk.js",
+    "static/js/2.ee53d3c2.chunk.js.map": "/MyAnime/static/js/2.ee53d3c2.chunk.js.map",
+    "index.html": "/MyAnime/index.html",
+    "static/css/2.5b915486.chunk.css.map": "/MyAnime/static/css/2.5b915486.chunk.css.map",
+    "static/css/main.e7fcfb21.chunk.css.map": "/MyAnime/static/css/main.e7fcfb21.chunk.css.map",
+    "static/js/2.ee53d3c2.chunk.js.LICENSE.txt": "/MyAnime/static/js/2.ee53d3c2.chunk.js.LICENSE.txt",
+    "static/media/slick-theme.css": "/MyAnime/static/media/slick.c94f7671.ttf"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.ac681fef.js",
+    "static/css/2.5b915486.chunk.css",
+    "static/js/2.ee53d3c2.chunk.js",
+    "static/css/main.e7fcfb21.chunk.css",
+    "static/js/main.ee987839.chunk.js"
+  ]
+}
